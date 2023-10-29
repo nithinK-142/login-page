@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const LoginPageContainer = styled.div`
   display: flex;
@@ -55,6 +55,24 @@ const SubmitButton = styled.button`
   }
 `;
 
+const LinksBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+`;
+
+const Links = styled.a`
+  color: #3494e6;
+  opacity: .8;
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 5px 0;
+
+  &:hover{
+    opacity: 1;
+  }
+`;
+
 const LoginPage = () => {
   return (
     <LoginPageContainer>
@@ -63,6 +81,10 @@ const LoginPage = () => {
         <InputField type="text" placeholder="Username" />
         <InputField type="password" placeholder="Password" />
         <SubmitButton>Submit</SubmitButton>
+        <LinksBlock>
+          <Links href="#">Forgot Password</Links>
+          <Links href="#">Signup</Links>
+        </LinksBlock>
       </LoginForm>
     </LoginPageContainer>
   );
